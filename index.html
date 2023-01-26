@@ -1,0 +1,48 @@
+<!--
+ * @Author: daffodilma daffodilma@163.com
+ * @Date: 2022-11-04 10:10:35
+ * @LastEditors: daffodilma daffodilma@163.com
+ * @LastEditTime: 2023-01-24 20:49:00
+ * @FilePath: \chapter1\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html>
+<head>
+ <title>ForVote</title>
+ <link href='/lib/gfonts.css' rel='stylesheet' type='text/css'>
+ <link href='/lib/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="container">
+ <h1>行星防御理事会第一次公共投票</h1>
+ <div class="table-responsive">
+  <table class="table table-bordered">
+   <thead>
+    <tr>
+     <th>候选人</th>
+     <th>目前票数</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>罗辑</td>
+     <td id="candidate-1"></td>
+    </tr>
+    <tr>
+     <td>程心</td>
+     <td id="candidate-2"></td>
+    </tr>
+    <tr>
+     <td>维德</td>
+     <td id="candidate-3"></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <input type="text" id="candidate" />
+ <a href="" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+</body>
+<script src="/lib/web3.js"></script>
+<script src="/lib/jquery-3.1.1.slim.min.js"></script>
+<script src="./index.js"></script>
+</html>
