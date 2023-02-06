@@ -1,8 +1,5 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.8.17;
 
-import "truffle/Assert.sol";
-import "truffle/DeployedAddresses.sol";
-import "../contracts/MetaCoin.sol";
 
 contract TestMetacoin {
 
