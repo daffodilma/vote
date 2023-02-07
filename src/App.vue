@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <voting msg="Welcome to Your Vue.js App"/>
+    <voting msg="A Simple Hello World Voting Application"/>
   </div>
 </template>
 
