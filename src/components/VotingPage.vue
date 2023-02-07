@@ -94,9 +94,11 @@
         <div class="grid-content bg-purple-light"></div>
       </el-col>
     </el-row>
-    <el-input width="50px" placeholder="请输入内容" v-model="input" clearable>
-    </el-input>
-    <el-button>默认按钮</el-button>
+    <div class="vote"> 
+      <input type="text" id="candidate" class="inp"/>
+      <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+    </div>
+
     <div>
       <table>
         <thead>
@@ -122,8 +124,6 @@
       </table>
       <div id="msg"></div>
     </div>
-    <input type="text" id="candidate" />
-    <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
   </div>
 </template>
 
@@ -134,15 +134,27 @@ export default {
     msg: String
   },
   data() {
-      return {
-        input: ''
-      }
+    return {
+      input: ''
     }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.inp{
+width: 300px;
+height: 40px;
+margin-right: 50px;
+padding-left: 8px;
+border-radius: 5px;
+outline: none;
+border:none;
+box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
 h3 {
   margin: 40px 0 0;
 }
@@ -164,8 +176,17 @@ li {
 
 a {
   color: #42b983;
+  text-decoration: none;
+  border: solid 1px #f9fafc;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  line-height: 35px;
 }
-
+.vote{
+  margin-top: 40px;
+}
 .tit {
   height: 55px;
 }
@@ -208,7 +229,7 @@ a {
 
 .hello {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: linear-gradient(to right, #FED0FC, #63D1EC);
+
 }
 
 .el-carousel__item h3 {
@@ -220,15 +241,19 @@ a {
 }
 
 .el-carousel__item:nth-child(2n) {
-  background-color: white;
+  background-color: #050532;
+  border-radius: 50px;
 }
 
 .el-carousel__item:nth-child(2n+1) {
-  background-color: gray;
+  background-color: #060639;
+  border-radius: 50px;
+
 }
 
 .block {
   margin: 0 150px 60px;
-  box-shadow: 0 6px 15px 2px rgba(0, 0, 0, 0.5)
+  border-radius: 50px;
+  box-shadow: 0 6px 15px 2px rgba(0, 0, 0, 0.5);
 }
 </style>
