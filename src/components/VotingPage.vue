@@ -3,13 +3,12 @@
     <h1>{{ msg }}</h1>
 
     <div class="block">
-    <span class="demonstration">默认 Hover 指示器触发</span>
-    <el-carousel height="150px">
-      <el-carousel-item v-for="item in 4" :key="item">
-        <h3 class="small">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
-  </div>
+      <el-carousel height="250px" direction="vertical">
+        <el-carousel-item v-for="item in 4" :key="item">
+          <h3 class="small">{{ item }}</h3>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
     <div id="address"></div>
     <el-row>
@@ -95,7 +94,9 @@
         <div class="grid-content bg-purple-light"></div>
       </el-col>
     </el-row>
-
+    <el-input width="50px" placeholder="请输入内容" v-model="input" clearable>
+    </el-input>
+    <el-button>默认按钮</el-button>
     <div>
       <table>
         <thead>
@@ -131,7 +132,12 @@ export default {
   name: 'voting',
   props: {
     msg: String
-  }
+  },
+  data() {
+      return {
+        input: ''
+      }
+    }
 }
 </script>
 
@@ -141,9 +147,9 @@ h3 {
   margin: 40px 0 0;
 }
 
-h1{
-margin:0;
-padding: 50px 0 60px 0;
+h1 {
+  margin: 0;
+  padding: 50px 0 60px 0;
 }
 
 ul {
@@ -200,24 +206,29 @@ a {
   background-color: #f9fafc;
 }
 
-.hello{
-    font-family:Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, #FED0FC, #63D1EC);
+.hello {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to right, #FED0FC, #63D1EC);
 }
 
 .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+}
 
-  .el-carousel__item:nth-child(2n) {
-     background-color: #99a9bf;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-     background-color: #d3dce6;
-  }
+.el-carousel__item:nth-child(2n) {
+  background-color: white;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: gray;
+}
+
+.block {
+  margin: 0 150px 60px;
+  box-shadow: 0 6px 15px 2px rgba(0, 0, 0, 0.5)
+}
 </style>
