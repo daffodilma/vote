@@ -1,33 +1,24 @@
-# 使用NodeJS开发投票应用
+# vuedapp
 
-合约开发流程：
-
-合约代码编写（Solidity） --> 合约编译（solc）--> 合约部署（web3）
-
-## 开发语言及工具：
-
-- 区块链节点：ganache-cli
-- 基础环境：node
-- 合约开发语言：Solidity
-- 合约编译器：solc
-- 合约访问库：web3.js
-
-## 控制台示例运行
-
-进入项目目录，执行`demo.js`脚本：
-
+## Project setup
 ```
-~$ cd ~/repo/chapter1
-~/repo/chapter1$ node demo.js
+npm install
 ```
 
-## 网页示例运行
-
-1. 启动web服务器
+### Compiles and hot-reloads for development
 ```
-~$ cd ~/repo/chapter1
-~/repo/chapter1$ python -m SimpleHTTPServer
+npm run serve
 ```
-2. 在试验环境的嵌入浏览器中点击刷新按钮。
 
+### Compiles and minifies for production
+```
+npm run build
+```
 
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
