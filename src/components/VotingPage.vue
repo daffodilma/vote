@@ -2,8 +2,47 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
  <div id="address"></div>
- <div class="table-responsive">
-  <table class="table table-bordered">
+ <el-row>
+  <el-col :span="16" :offset="4" class="tit"><div class="grid-content bg-purple-dark">执剑人名单</div></el-col>
+</el-row>
+<el-row>
+  <el-col :span="12" :offset="4"><div class="grid-content bg-purple">
+    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+    <el-col :span="18"><div class="grid-content bg-purple-dark"></div></el-col>
+  </div></el-col>
+  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+</el-row>
+<el-row>
+  <el-col :span="12" :offset="4"><div class="grid-content bg-purple">    
+    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+    <el-col :span="18"><div class="grid-content bg-purple-dark"></div></el-col></div>
+  </el-col>
+  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+</el-row>
+<el-row>
+  <el-col :span="12" :offset="4"><div class="grid-content bg-purple">
+    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+    <el-col :span="18"><div class="grid-content bg-purple-dark"></div></el-col>
+  </div></el-col>
+  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+</el-row>
+<el-row>
+  <el-col :span="12" :offset="4"><div class="grid-content bg-purple">
+    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+    <el-col :span="18"><div class="grid-content bg-purple-dark"></div></el-col>
+  </div></el-col>
+  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+</el-row>
+<el-row>
+  <el-col :span="12" :offset="4"><div class="grid-content bg-purple">
+    <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+    <el-col :span="18"><div class="grid-content bg-purple-dark"></div></el-col>
+  </div></el-col>
+  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+</el-row>
+
+ <div>
+  <table>
    <thead>
     <tr>
      <th>Candidate</th>
@@ -57,4 +96,36 @@ li {
 a {
   color: #42b983;
 }
+
+.tit{
+  height: 55px;
+}
+.el-row {
+    margin: auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    /* background: #99a9bf; */
+  }
+  .bg-purple {
+    /* background: #d3dce6; */
+    border: 1px solid black;
+  }
+  .bg-purple-light {
+    /* background: #e5e9f2; */
+    border: 1px solid black;
+  }
+  .grid-content {
+    /* border-radius: 4px; */
+    min-height: 160px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
 </style>

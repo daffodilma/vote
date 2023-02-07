@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <voting msg="A Simple Hello World Voting Application"/>
+    <voting msg="行星防御理事会执剑人公共投票"/>
   </div>
 </template>
 
