@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import voting from './components/VotingPage.vue'
+import voting from './views/VotingPage.vue'
 
 export default {
   name: 'App',

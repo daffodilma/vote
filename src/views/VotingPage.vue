@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <header-part></header-part>
     <h1>{{ msg }}</h1>
 
     <div class="block">
@@ -26,12 +27,15 @@
             <div class="grid-content bg-purple-light"></div>
           </el-col>
           <el-col :span="18">
-            <div class="grid-content bg-purple-dark"></div>
+            <div class="grid-content bg-purple-dark">
+              <div class="name">rama</div>
+              <div class="info">123</div>
+            </div>
           </el-col>
         </div>
       </el-col>
       <el-col :span="4">
-        <div class="grid-content bg-purple-light"></div>
+        <div class="grid-content bg-purple-light" id="candidate-1"></div>
       </el-col>
     </el-row>
     <el-row>
@@ -46,7 +50,7 @@
         </div>
       </el-col>
       <el-col :span="4">
-        <div class="grid-content bg-purple-light"></div>
+        <div class="grid-content bg-purple-light" id="candidate-2"></div>
       </el-col>
     </el-row>
     <el-row>
@@ -61,7 +65,7 @@
         </div>
       </el-col>
       <el-col :span="4">
-        <div class="grid-content bg-purple-light"></div>
+        <div class="grid-content bg-purple-light" id="candidate-3"></div>
       </el-col>
     </el-row>
     <el-row>
@@ -128,6 +132,8 @@
 </template>
 
 <script>
+import header from '../components/HeaderPart.vue'
+
 export default {
   name: 'voting',
   props: {
@@ -137,6 +143,9 @@ export default {
     return {
       input: ''
     }
+  },
+  components: {
+    'header-part':header
   }
 }
 </script>
@@ -159,7 +168,7 @@ h3 {
   margin: 40px 0 0;
 }
 
-h1 {
+h1 { 
   margin: 0;
   padding: 50px 0 60px 0;
 }
@@ -175,7 +184,7 @@ li {
 }
 
 a {
-  color: #42b983;
+  color: black;
   text-decoration: none;
   border: solid 1px #f9fafc;
   border-radius: 10px;
@@ -185,7 +194,7 @@ a {
   line-height: 35px;
 }
 .vote{
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .tit {
   height: 55px;
