@@ -28,14 +28,16 @@
           </el-col>
           <el-col :span="18">
             <div class="grid-content bg-purple-dark">
-              <div class="name">rama</div>
+              <div class="name">Lucy</div>
               <div class="info">123</div>
             </div>
           </el-col>
         </div>
       </el-col>
       <el-col :span="4">
-        <div class="grid-content bg-purple-light" id="candidate-1"></div>
+        <div class="grid-content bg-purple-light" id="candidate-1">
+          <td></td>
+        </div>
       </el-col>
     </el-row>
     <el-row>
@@ -103,7 +105,7 @@
       <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
     </div>
 
-    <div>
+    <!-- <div>
       <table>
         <thead>
           <tr>
@@ -127,7 +129,7 @@
         </tbody>
       </table>
       <div id="msg"></div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -192,6 +194,7 @@ a {
   width: 100px;
   height: 35px;
   line-height: 35px;
+  margin-bottom: 150px;
 }
 .vote{
   margin-top: 60px;

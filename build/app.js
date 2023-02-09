@@ -34214,7 +34214,7 @@ var XHR2 = __webpack_require__(61); // jshint ignore: line
  * HttpProvider should be used to send rpc calls over http
  */
 var HttpProvider = function (host, timeout, user, password, headers) {
-  this.host = host || 'http://localhost:8898';
+  this.host = host || 'http://localhost:7545';
   this.timeout = timeout || 0;
   this.user = user;
   this.password = password;
@@ -40587,7 +40587,7 @@ var XHR2 = __webpack_require__(61); // jshint ignore: line
  * HttpProvider should be used to send rpc calls over http
  */
 var HttpProvider = function (host, timeout) {
-    this.host = host || 'http://localhost:8898';
+    this.host = host || 'http://localhost:7545';
     this.timeout = timeout || 0;
 };
 
@@ -43488,7 +43488,7 @@ if (typeof Meteor !== 'undefined' && Meteor.isServer) { // jshint ignore: line
  * HttpProvider should be used to send rpc calls over http
  */
 var HttpProvider = function (host) {
-    this.host = host || 'http://localhost:8898';
+    this.host = host || 'http://localhost:7545';
 };
 
 /**
