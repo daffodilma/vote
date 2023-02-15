@@ -58,7 +58,7 @@ section{ display: flex;  }
 
 .leftside img{ padding-left: 50px; width: 800px;  height: 400px; }
 
-.rightside{ width:40%; height: 300px; color: white; text-align: center; margin-top: 80px; padding: 40px;}
+.rightside{ width:40%; height: 300px; color: white; text-align: center; margin: 100px 400px; padding: 40px;}
 
 .rightside h1{ text-align: center;
     color: #ffffff;
