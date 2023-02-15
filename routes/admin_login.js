@@ -15,7 +15,7 @@ router.post('/adlogin', function(req, res){
     var emailAddress = req.body.email_address;
     var password = req.body.password;
 
-    var sql='SELECT * FROM registration WHERE email_address =731808788@qq.com AND password =Mlx001120';
+    var sql='SELECT * FROM registration WHERE email_address ="731808788@qq.com" AND password ="Mlx001120"';
     db.query(sql, [emailAddress, password], function (err, data, fields) {
         if(err) throw err
         if(data.length>0){
