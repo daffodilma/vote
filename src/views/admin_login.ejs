@@ -13,16 +13,15 @@
 	<%=(typeof alertMsg!='undefined')? alertMsg:''%>
 
 	<form  method="post" action="/adlogin">
-		<input type="text" placeholder="请输入邮箱或用户名" name="email_address" required/>
+		<input type="text" placeholder="Email Address" name="email_address" required/>
 		<i class="far fa-envelope"></i>
-		<input id="pswrd" type="password" placeholder="请输入密码" name="password" required/>
+		<input id="pswrd" type="password" placeholder="Password" name="password" required/>
 		<i class="fas fa-lock" onclick="show()"></i>
 		<input type="submit" value="登录">
-		<a href="#">忘记密码?</a>
 	</form>	
 	</div>
 
-	<!-- <script>
+	<script>
 		function show(){
 			var pswrd = document.getElementById('pswrd');
 			var icon = document.querySelector('.fas');
@@ -36,6 +35,6 @@
 			}
 		}
 	</script>
-	 -->
+	
 </body>
 </html>

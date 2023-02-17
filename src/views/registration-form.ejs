@@ -8,14 +8,14 @@
       crossorigin="anonymous"
     ></script>
     <link href="css/registration_from.css" rel="stylesheet" type="text/css">
-    <title>Sign in & Sign up Form</title>
+    <title>注册您的账号</title>
   </head>
   <body>
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
           <form method="post" action="register" >
-            <h2 class="title">Sign up</h2>
+            <h2 class="title">注册</h2>
             <p> <%=(typeof alertMsg!='undefined')? alertMsg:''%></p>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -33,7 +33,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="ConfirmPassword" name="confirm_password"/>
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn" value="注册" />
            
             
           </form>
@@ -43,17 +43,13 @@
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
-            <h3>One of us?</h3>
-            <p>
-              If you have already signed up , that's great !! 
-              Please LOGIN 
-            </p>
+            <h3>已经有账号了？</h3>
             <a href="/login"><button class="btn transparent" id="sign-up-btn">
-              Login
+              登陆
             </button>
             </a>
           </div>
-          <img src="img/home_page.png" class="image" alt="" />
+          <!-- <img src="img/home_page.png" class="image" alt="" /> -->
         </div>
       </div>
 
