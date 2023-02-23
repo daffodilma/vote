@@ -38,11 +38,11 @@ var data;
 
 router.post('/registerdata',function(req,res){
     var dob=[];
-    data=req.body.aadharno;    //data stores aadhar no
+    data=req.body.id_No;    //data stores id no
     console.log(data);
     account_address=req.body.account_address;     //stores metamask acc address
     //console.log(data);
-    let sql = "SELECT * FROM aadhar_info WHERE Aadharno = ?" ;   
+    let sql = "SELECT * FROM id_info WHERE id_No = ?" ;   
     conn.query(sql, data, (error, results, fields) => {
         if (error) {
           return console.error(error.message);
@@ -102,7 +102,7 @@ router.post('/otpverify', (req, res) => {
              throw err2;
             }
               else{
-                var sql1="Update aadhar_info set Is_registered=? Where Aadharno=?";
+                var sql1="Update id_info set Is_registered=? Where id_No=?";
                 var record1=['YES',data]
                 console.log(data)
                 conn.query(sql1,record1, function(err1,res1)

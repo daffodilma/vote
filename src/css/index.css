@@ -54,11 +54,9 @@ nav{
 
 section{ display: flex;  }
 
-.leftside { width: 60%; height: auto; overflow: hidden; margin-top: 20px;}
+.leftside { width: 70%; height: auto; overflow: hidden; margin-top: 20px;}
 
-.leftside img{ padding-left: 50px; width: 800px;  height: 400px; }
-
-.rightside{ width:40%; height: 300px; color: white; text-align: center; margin: 100px 400px; padding: 40px;}
+.rightside{ width:30%; height: 300px; color: white; text-align: center; margin: 100px 300px;}
 
 .rightside h1{ text-align: center;
     color: #ffffff;
@@ -69,12 +67,14 @@ section{ display: flex;  }
 .rightside p {  
     font-size: 1.1rem; padding: 30px 0; }
 
-.rightside button{   font-size: 17px;
+.rightside button{   
+    font-size: 17px;
     font-weight: 600;
     color: white;
     text-transform: uppercase;
     background: linear-gradient(57deg,black , pink); 
     border-radius: 25px;
+    margin:10px 0 0 10px;
     border: 0;
     padding: 20px 35px ; 
 

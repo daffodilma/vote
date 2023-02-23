@@ -18,12 +18,12 @@ SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for aadhar_info
+-- Table structure for id_info
 -- ----------------------------
-DROP TABLE IF EXISTS `aadhar_info`;
-CREATE TABLE `aadhar_info`  (
+DROP TABLE IF EXISTS `id_info`;
+CREATE TABLE `id_info`  (
   `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Aadharno` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `id_No` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Phoneno` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `Gender` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -32,9 +32,9 @@ CREATE TABLE `aadhar_info`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of aadhar_info
+-- Records of id_info
 -- ----------------------------
-INSERT INTO `aadhar_info` VALUES ('t1', '1001', 'test@test.com', NULL, 'M', '1999-01-01', 'YES');
+INSERT INTO `id_info` VALUES ('t1', '1001', 'test@test.com', NULL, 'M', '1999-01-01', 'YES');
 
 -- ----------------------------
 -- Table structure for registered_users
