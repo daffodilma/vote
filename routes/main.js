@@ -37,7 +37,7 @@ var data;
 // app.use(express.urlencoded());
 
 router.post('/registerdata',function(req,res){
-    var dob=[];
+    var age=[];
     data=req.body.id_No;    //data stores id no
     console.log(data);
     account_address=req.body.account_address;     //stores metamask acc address
@@ -48,9 +48,9 @@ router.post('/registerdata',function(req,res){
           return console.error(error.message);
         }
         //console.log(results)
-        dob = results[0].Dob;
+        age = results[0].age;
         var email=results[0].Email;
-        age = getAge(dob);
+        age = getAge(age);
         is_registerd=results[0].Is_registered;
         if (is_registerd!='YES')
         {
@@ -84,10 +84,10 @@ router.post('/registerdata',function(req,res){
         
     });
 
-    //console.log(dob);
+    //console.log(age);
     //console.log(age);
     //res.send("ok")
-    //console.log(dob);
+    //console.log(age);
 })
 
 router.post('/otpverify', (req, res) => {
