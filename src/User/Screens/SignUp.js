@@ -65,35 +65,35 @@ export default function SignUp() {
             style={{ height: 90, width: 90 }}
           />
           <div style={inputDiv}>
-            <h3 style={{ color: "white", fontSize: 23 }}>SignUp</h3>
+            <h3 style={{ color: "white", fontSize: 23 }}>账户注册</h3>
             <h3 style={labels}>
-              Username <span style={{ color: "red" }}>*</span>
+              用户名 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               style={inputs}
-              placeholder="Username"
+              placeholder="用户名"
               type="text"
             />
             <h3 style={labels}>
-              Email <span style={{ color: "red" }}>*</span>
+              账号 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               style={inputs}
-              placeholder="Email"
+              placeholder="用户名"
               type="email"
             />
             <h3 style={labels}>
-              Password <span style={{ color: "red" }}>*</span>
+              密码 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               style={inputs}
-              placeholder="Password"
+              placeholder="密码"
               type="password"
             />
             <Button onClick={signUp} style={button} variant="contained">
@@ -105,11 +105,11 @@ export default function SignUp() {
                   color="white"
                 />
               ) : (
-                " SignUp"
+                " 注册"
               )}
             </Button>
             <Button href="/Login" style={create}>
-              Already Have an account
+              已经有账号了？
             </Button>
           </div>
         </div>

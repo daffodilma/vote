@@ -24,14 +24,14 @@ export default function Home() {
           />
         </div>
         <div style={rightDiv}>
-          <h1 style={rightTitle}>E-Vote</h1>
+          <h1 style={rightTitle}>去中心化公共投票系统</h1>
         
           <div style={buttonsDiv}>
             <Button href="/Login" style={button} variant="contained">
-              user login
+              投票登陆
             </Button>
             <Button href="/AdminLogin" style={button} variant="contained">
-              Admin login
+              管理员登陆
             </Button>
           </div>
         </div>

@@ -61,25 +61,25 @@ export default function Login() {
             style={{ height: 90, width: 90, objectFit: "contain" }}
           />
           <div style={inputDiv}>
-            <h3 style={{ color: "white", fontSize: 23 }}>Login</h3>
+            <h3 style={{ color: "white", fontSize: 23 }}>投票登陆</h3>
             <h3 style={labels}>
-              Email <span style={{ color: "red" }}>*</span>
+              账号 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               style={inputs}
-              placeholder="Email"
+              placeholder="账号"
               type="email"
             />
             <h3 style={labels}>
-              Password <span style={{ color: "red" }}>*</span>
+              密码 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               style={inputs}
-              placeholder="Password"
+              placeholder="密码"
               type="password"
             />
 
@@ -92,11 +92,11 @@ export default function Login() {
                   color="white"
                 />
               ) : (
-                "Login"
+                "登陆"
               )}
             </Button>
             <Button href="/SignUp" style={create}>
-              Create a new account
+              创建账户
             </Button>
           </div>
         </div>
