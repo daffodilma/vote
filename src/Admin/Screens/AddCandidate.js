@@ -62,41 +62,41 @@ export default function AddCandidate() {
     >
       <Paper style={paper} elevation={3}>
         <h3 style={labels}>
-          Name <span style={{ color: "red" }}>*</span>
+          姓名 <span style={{ color: "red" }}>*</span>
         </h3>
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           style={inputs}
-          placeholder="Name"
+          placeholder="姓名"
         />
         <h3 style={labels}>
-          Age <span style={{ color: "red" }}>*</span>
+          年龄 <span style={{ color: "red" }}>*</span>
         </h3>
         <input
           value={age}
           onChange={(e) => setAge(e.target.value)}
           style={inputs}
-          placeholder="Age"
+          placeholder="年龄"
         />
         <h3 style={labels}>
-          Party <span style={{ color: "red" }}>*</span>
+          组织 <span style={{ color: "red" }}>*</span>
         </h3>
         <input
           value={party}
           onChange={(e) => setParty(e.target.value)}
           style={inputs}
-          placeholder="Party"
+          placeholder="组织"
         />
 
         <h3 style={labels}>
-          Qualification <span style={{ color: "red" }}>*</span>
+          介绍 <span style={{ color: "red" }}>*</span>
         </h3>
         <input
           value={qualification}
           onChange={(e) => setQualification(e.target.value)}
           style={inputs}
-          placeholder="Qualification"
+          placeholder="介绍"
         />
         <br />
         <Button
@@ -126,7 +126,7 @@ export default function AddCandidate() {
               color="white"
             />
           ) : (
-            "Add Candidate"
+            "添加候选人"
           )}
         </Button>
       </Paper>

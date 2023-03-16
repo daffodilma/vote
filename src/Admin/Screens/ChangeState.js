@@ -42,7 +42,7 @@ export default function ChangeState() {
 
   return (
     <div style={{}}>
-      <h2 style={{ margin: 3 }}>Current State : {state}</h2>
+      <h2 style={{ margin: 3 }}>现在的阶段 : {state}</h2>
       <br />
       <FormControl>
         <RadioGroup
@@ -54,23 +54,23 @@ export default function ChangeState() {
           <FormControlLabel
             value="Voting"
             control={<Radio color="success" />}
-            label="Voting"
+            label="开始投票"
           />
           <FormControlLabel
             value="Registration"
             control={<Radio color="success" />}
-            label="Registration"
+            label="选民登记"
           />
           <FormControlLabel
             value="Result"
             control={<Radio color="success" />}
-            label="Result"
+            label="投票结束"
           />
         </RadioGroup>
         <br />
         <Button onClick={changeState} variant="contained">
           {" "}
-          Change State
+          修改投票阶段
         </Button>
       </FormControl>
     </div>

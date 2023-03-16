@@ -39,28 +39,28 @@ function AdminHome(props) {
   };
   const menuWithIcons = [
     {
-      name: "Candidate Details",
+      name: "候选人详情",
       icon: <AccountCircleIcon />,
       path: "Candidate-Details",
     },
     {
-      name: "Add Candidates",
+      name: "添加候选人",
       icon: <PersonAddIcon />,
       path: "Add-Candidates",
     },
     {
-      name: "Change State",
+      name: "改变当前阶段",
       icon: <PublishedWithChangesIcon />,
       path: "Change-State",
     },
     {
-      name: "Analytics",
+      name: "数据分析",
       icon: <HowToRegIcon />,
       path: "Analytics",
     },
 
     {
-      name: "Logout",
+      name: "登出",
       icon: <LogoutIcon />,
       path: "Logout",
     },
