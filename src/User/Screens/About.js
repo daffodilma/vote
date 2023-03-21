@@ -4,61 +4,36 @@ export default function About() {
   return (
     <StyleRoot>
       <div>
-        <h2 style={{ margin: 2 }}>User Manual</h2>
-        <p>These are few Guidelines for user :</p>
-        <p>1. Voter Registration</p>
+        <h2 style={{ margin: 2 }}>投票须知</h2>
+        <p>请阅读以下指引 :</p>
+        <p>1. 选民注册</p>
         <ul>
           <li>
-            For casting the vote user needs to first register himself.For this
-            registration purpose,the user will be provided a voter registration
-            form on this website.
+          进行投票之前用户需要首先注册，进行选民登记。
           </li>
           <li>
-            The voter can only register in the registration phase.After the
-            registration phase is over the user cannot register and thus will
-            not be able to vote.
+          选民只能在登记阶段进行登记，注册阶段结束，用户无法注册，将不能投票。
           </li>
           <li>
-            For registration,the user will have to enter his aadhar card number
-            and the account address which the user will be using for voting
-            purpose.
+          为了注册，用户必须输入手机号用于身份验证。
           </li>
-          <li>
-            At the first stage the user's age will be checked .if user is 18 or
-            above of age then only he is eligible to vote.
-          </li>
-          <li>
-            The second stage is OTP verification .This stage is required to
-            validate the voter itself,after entering the aadhar number and
-            successful age verification.
-          </li>
-          <li>After enterning OTP user will get successfully registered.</li>
+          <li>完成流程后用户将注册成功，可以进行投票。</li>
         </ul>
-        <p>2.voting process</p>
+        <p>2.投票流程</p>
         <ul>
           <li>
-            overall voting process is divided into 3 phases.All of which will be
-            initialized and terminated by admin.User have to participate in the
-            process according to current phase.
+          整个投票过程分为3个阶段由管理员初始化和终止。
           </li>
         </ul>
         <ol>
           <li>
-            <b>Registration Phase:</b> During this phase the registration of
-            users (which are going to cast the vote) will be carried out.
+            <b>注册阶段:</b> 在这一阶段，将对用户进行选民登记。
           </li>
           <li>
-            <b>voting Phase :</b> After initialization of voting phase from the
-            admin,user can cast the vote in voting section.The casting of vote
-            can be simply done by clicking on "VOTE" button,after which a
-            transaction will be initiated and after confirming transaction the
-            vote will get successfully casted.After voting phase gets over user
-            will not be able to cast.
+            <b>投票阶段:</b> 在管理员初始化投票阶段后，用户可以在投票部分进行投票。点击“投票”按钮之后将启动交易，确认交易后将成功投票。投票阶段结束后，用户将无法投票。
           </li>
           <li>
-            <b>Result Phase : </b>This is the final stage of voting process
-            during which the result of election will be displayed in "result
-            section"
+            <b>结果公示阶段: </b>在投票结果区域可查看投票结果。
           </li>
         </ol>
       </div>

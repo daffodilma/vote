@@ -105,4 +105,5 @@ const buttonsDiv = {
 };
 const button = {
   margin: 10,
+  backgroundColor: "#6b8e4e"
 };

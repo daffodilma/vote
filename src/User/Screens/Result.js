@@ -54,7 +54,7 @@ export default function Result() {
           image={
             "https://img.freepik.com/free-vector/voters-inserting-forms-into-ballot-boxes_74855-4585.jpg?size=626&ext=jpg&ga=GA1.1.1522381886.1646910666"
           }
-          header={"Hold on! until polling is done"}
+          header={"目前无法查看结果"}
         />
       </div>
     );

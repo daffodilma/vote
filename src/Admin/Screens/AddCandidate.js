@@ -28,11 +28,11 @@ export default function AddCandidate() {
       await eVote.methods
         .createCandidate(name, age, party, qualification)
         .send({ from: account });
-      setAlertName("Transaction Successfull");
+      setAlertName("添加成功");
       setAlert("success");
       setOpen(true);
     } catch (error) {
-      setAlertName("Something went wrong 😥, please try again");
+      setAlertName("添加失败，请重新添加");
       setAlert("error");
     }
 

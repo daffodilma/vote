@@ -11,7 +11,7 @@ export default function CandidatesEmptyPage(props) {
         alignItems: "center",
       }}
     >
-      <h2 style={{ margin: 2, color: "#116DD3" }}>{props.header}</h2>
+      <h2 style={{ margin: 2, color: "#6B8E4E" }}>{props.header}</h2>
       <img alt="background" style={imageStyle} src={props.image} />
     </div>
   );

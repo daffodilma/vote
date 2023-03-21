@@ -18,13 +18,13 @@ export default function VoterRegistration() {
       const aadharRes = await eVote.methods.aadharList(aadhar).call();
       if (res.aadhar) {
         setAlert("warning");
-        setAlertName("You already registered with aadhar");
+        setAlertName("你已经验证过手机号了");
         setOpen(true);
         return;
       }
       if (aadharRes.accountAddress !== "") {
         setAlert("warning");
-        setAlertName("aadhar already used");
+        setAlertName("手机号已被注册");
         setOpen(true);
         return;
       }
@@ -41,7 +41,7 @@ export default function VoterRegistration() {
   return (
     <div style={{ display: "flex", flex: 1 }}>
       <Paper style={paper} elevation={3}>
-        <h3 style={text}>Aadhar Details</h3>
+        <h3 style={text}>身份验证</h3>
         <div style={scanDiv}>
           <img
             alt="background"
@@ -53,16 +53,16 @@ export default function VoterRegistration() {
         <Divider style={{ width: "100%" }} />
         <br />
         <div style={numberDiv}>
-          <h3 style={{ margin: 2 }}>Aadhar Number *</h3>
+          <h3 style={ head }>请输入手机号码 *</h3>
           <input
             value={aadhar}
             onChange={(e) => setAadhar(e.target.value)}
             style={input}
-            placeholder="Aadhar Number"
+            placeholder="手机号"
           />
           <br />
-          <Button onClick={addAadhar} variant="contained">
-            Verify
+          <Button onClick={addAadhar} variant="contained" style={button}>
+            确认
           </Button>
         </div>
       </Paper>
@@ -78,7 +78,7 @@ export default function VoterRegistration() {
 const paper = {
   backgroundColor: "white",
   width: "100%",
-  height: "auto",
+  height: "800px",
   display: "flex",
   flexDirection: "column",
   padding: 10,
@@ -86,7 +86,7 @@ const paper = {
 };
 
 const text = {
-  color: "#336EB2",
+  color: "#2D493B",
   fontSize: 25,
   margin: 3,
 };
@@ -99,16 +99,30 @@ const scanDiv = {
   flexDirection: "row",
 };
 const input = {
-  height: 40,
+  height: 50,
   fontSize: 16,
   borderRadius: 4,
   outline: "none",
   padding: 10,
-  width: "100%",
-  border: "1.5px solid #336EB2",
+  width: "40%",
+  border: "1.5px solid #6B8E4E",
+  margin: "0 auto"
 };
 const numberDiv = {
   display: "flex",
   flexDirection: "column",
   width: "80%",
 };
+
+const button = {
+  backgroundColor: "#6b8e4e",
+  width: "150px",
+  height: "40px",
+  margin: "0 auto"
+}
+
+const head = {
+  width:"150px",
+  height: "50px",
+  margin: "0 auto"
+}

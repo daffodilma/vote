@@ -38,29 +38,29 @@ function UserHome(props) {
   };
   const menuWithIcons = [
     {
-      name: "Voter Registration",
+      name: "选民注册",
       icon: <HowToRegIcon />,
       path: "Voter-Registration",
     },
     {
-      name: "Voter Area",
+      name: "投票",
       icon: <BallotIcon />,
       path: "Voter-Area",
     },
 
     {
-      name: "Result",
+      name: "投票结果",
       icon: <PollIcon />,
       path: "Result",
     },
 
     {
-      name: "About",
+      name: "通知公告",
       icon: <InfoIcon />,
       path: "About",
     },
     {
-      name: "Logout",
+      name: "退出登陆",
       icon: <LogoutIcon />,
       path: "Logout",
     },
@@ -85,7 +85,7 @@ function UserHome(props) {
   });
 
   const drawer = (
-    <div style={{ backgroundColor: "#17202A", height: "100vh" }}>
+    <div style={{ backgroundColor: "white", height: "100vh" }}>
       <span
         style={{
           display: "flex",
@@ -95,11 +95,11 @@ function UserHome(props) {
         }}
       >
         <Avatar
-          style={{ backgroundColor: "#EE4C0B" }}
+          style={{ backgroundColor: "#2D493B" }}
           alt={username}
           src={username}
         />
-        <h3 style={{ color: "white", marginLeft: 8 }}>{username}</h3>
+        <h3 style={{ color: "#2D493B", marginLeft: 8 }}>{username}</h3>
       </span>
       <Divider />
       <List>
@@ -117,8 +117,8 @@ function UserHome(props) {
             button
             key={index}
           >
-            <ListItemIcon style={{ color: "white" }}>{data.icon}</ListItemIcon>
-            <ListItemText style={{ color: "white" }} primary={data.name} />
+            <ListItemIcon style={{ color: "#6B8E4E" }}>{data.icon}</ListItemIcon>
+            <ListItemText style={{ color: "#2D493B" }} primary={data.name} />
           </ListItem>
         ))}
       </List>
@@ -136,7 +136,7 @@ function UserHome(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
-        style={{ backgroundColor: "#17202A" }}
+        style={{ backgroundColor: "#2D493B" }}
       >
         <Toolbar>
           <IconButton
