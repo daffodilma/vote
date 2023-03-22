@@ -17,9 +17,9 @@ export default function Home() {
         <div style={leftDiv}>
           <img
             alt="background"
-            src={require("../../voting2-removebg.png")}
-            height={"80%"}
-            width={"80%"}
+            src={require("../../earth.gif")}
+            height={"60%"}
+            width={"60%"}
             style={{ objectFit: "contain" }}
           />
         </div>
@@ -40,7 +40,7 @@ export default function Home() {
   );
 }
 const rootDiv = {
-  backgroundColor: "#17202A",
+  backgroundColor: "black",
   height: "100vh",
   position: "absolute",
   top: 0,
@@ -54,7 +54,7 @@ const rootDiv = {
   },
 };
 const leftDiv = {
-  backgroundColor: "#17202A",
+  backgroundColor: "black",
 
   flex: 1,
   display: "flex",
@@ -73,7 +73,7 @@ const rightDiv = {
   flex: 0.5,
   justifyContent: "center",
   alignItems: "center",
-  backgroundColor: "#17202A",
+  backgroundColor: "black",
   "@media (max-width: 500px)": {
     height: "100vh",
     flex: 1,
@@ -105,5 +105,6 @@ const buttonsDiv = {
 };
 const button = {
   margin: 10,
-  backgroundColor: "#6b8e4e"
+  background: "linear-gradient(to right, black, #6b8e4e",
+  color: "white"
 };

@@ -68,11 +68,15 @@ export default function ChangeState() {
           />
         </RadioGroup>
         <br />
-        <Button onClick={changeState} variant="contained">
+        <Button onClick={changeState} style={button} variant="contained">
           {" "}
           修改投票阶段
         </Button>
       </FormControl>
     </div>
   );
+}
+
+const button = {
+  backgroundColor: "green"
 }

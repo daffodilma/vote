@@ -79,7 +79,7 @@ function AdminHome(props) {
   }, [dispatch, eVote]);
 
   const drawer = (
-    <div style={{ backgroundColor: "#17202A", height: "100vh" }}>
+    <div style={{ backgroundColor: "white", height: "100vh" }}>
       <span
         style={{
           display: "flex",
@@ -92,7 +92,7 @@ function AdminHome(props) {
           alt="bemy Sharp"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoGov7ul8dzgF8tbD125KHR49_hsRoP6FJmg&usqp=CAU"
         />
-        <h3 style={{ color: "white", marginLeft: 8 }}>
+        <h3 style={{ color: "#2d493b", marginLeft: 8 }}>
           {account.substr(0, 6) + "....." + account.substr(37, 42)}
         </h3>
       </span>
@@ -111,8 +111,8 @@ function AdminHome(props) {
             button
             key={index}
           >
-            <ListItemIcon style={{ color: "white" }}>{data.icon}</ListItemIcon>
-            <ListItemText style={{ color: "white" }} primary={data.name} />
+            <ListItemIcon style={{ color: "#2d493b" }}>{data.icon}</ListItemIcon>
+            <ListItemText style={{ color: "#6b8e4e" }} primary={data.name} />
           </ListItem>
         ))}
       </List>
@@ -131,7 +131,7 @@ function AdminHome(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
-        style={{ backgroundColor: "#17202A" }}
+        style={{ backgroundColor: "#2d493b" }}
       >
         <Toolbar>
           <IconButton

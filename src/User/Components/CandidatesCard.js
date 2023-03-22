@@ -58,19 +58,19 @@ export default function CandidateCard(props) {
 // styles
 
 const cardDiv = {
-  backgroundColor: "#17202A",
+  backgroundColor: "black",
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
 };
 const cardContent = {
-  backgroundColor: "#17202A",
+  backgroundColor: "black",
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
 };
 const cardAction = {
-  backgroundColor: "#184E8A",
+  backgroundColor: "#6b8e4e",
   width: "100%",
   display: "flex",
   justifyContent: "center",

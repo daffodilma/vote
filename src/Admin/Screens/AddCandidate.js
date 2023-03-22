@@ -58,9 +58,12 @@ export default function AddCandidate() {
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
+        height: "80vh"
       }}
     >
+
       <Paper style={paper} elevation={3}>
+      <h2 style={tit}>添加候选人</h2>
         <h3 style={labels}>
           姓名 <span style={{ color: "red" }}>*</span>
         </h3>
@@ -95,7 +98,7 @@ export default function AddCandidate() {
         <input
           value={qualification}
           onChange={(e) => setQualification(e.target.value)}
-          style={inputs}
+          style={inputs,info}
           placeholder="介绍"
         />
         <br />
@@ -140,16 +143,18 @@ export default function AddCandidate() {
   );
 }
 const paper = {
-  backgroundColor: "black",
-  width: "100%",
-  height: "auto",
+  paddingTop: 150,
+  background: "linear-gradient(to right, white, #2d493b)",
+  width: "50%",
+  height: "700px",
   display: "flex",
   flexDirection: "column",
   padding: 10,
 };
 const inputs = {
+  width: "50%",
   height: 40,
-  margin: 7,
+  margin: "10px auto",
   fontSize: 16,
   borderRadius: 4,
   outline: "none",
@@ -157,13 +162,36 @@ const inputs = {
   padding: 10,
 };
 const labels = {
-  color: "white",
-  margin: 3,
+  color: "black",
+  margin: 5,
   fontSize: 16,
+  textAlign: "center",
 };
 const button = {
-  borderRadius: 4,
-  padding: 10,
-
-  margin: 7,
+  width: "50%",
+  display: "flex",
+  borderRadius: 20,
+  alignItems: "center",
+  margin: "0 auto",
+  marginTop: 10,
+  height: 43,
+  backgroundColor: "#6b8e4e",
+  "@media (max-width: 500px)": {},
 };
+
+const info = {
+  width: "60%",
+  height: 120,
+  margin: "7px auto",
+  fontSize: 16,
+  borderRadius: 4,
+  outline: "none",
+  border: "none",
+  padding: 10,
+}
+
+const tit = {
+  color:"black",
+  textAlign: "center",
+  fontSize: 35,
+}
