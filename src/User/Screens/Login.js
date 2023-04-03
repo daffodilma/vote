@@ -14,7 +14,7 @@ export default function Login() {
   const login = async () => {
     setLoading(true);
     if (!email || !password) {
-      alert("please fill all details");
+      alert("请填写完善信息");
       setLoading(false);
       return;
     }
@@ -26,7 +26,7 @@ export default function Login() {
         navigate("/UserHome/Voter-Registration");
         localStorage.setItem("email", email);
       } else {
-        alert("wrong user credintinals or please signup");
+        alert("输入账号密码错误");
       }
       setLoading(false);
     } catch (error) {
@@ -40,7 +40,7 @@ export default function Login() {
   }, []);
   useEffect(() => {
     loadBlockchainData(dispatch);
-  }, [dispatch]);
+  }, [dispatch]); 
 
   return (
     <StyleRoot>

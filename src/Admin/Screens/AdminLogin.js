@@ -1,28 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleRoot } from "radium";
 import Button from "@mui/material/Button";
 import ReactLoading from "react-loading";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { loadBlockchainData, loadWeb3 } from "../../Helpers/Web3Helpers";
 export default function AdminLogin() {
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const eVote = useSelector((state) => state.eVote.eVote);
   const navigate = useNavigate();
   const login = async () => {
     setLoading(true);
     if (!email || !password) {
-      alert("please fill all details");
+      alert("请填写完善信息");
       setLoading(false);
       return;
     }
-    if (email === "admin@gmail.com" && password === "admin123") {
-      navigate("/AdminHome/Candidate-Details");
+
+    try {
+      const res = await eVote.methods.usersList(email).call(); // 从以太坊网络获取用户信息
+
+      if (res.password === password) { // 如果密码正确，跳转到投票者注册页面，并将 email 存储到本地存储中
+        navigate("/AdminHome/Candidate-Details");
+        localStorage.setItem("email", email);
+      } else { // 如果密码错误，弹出警告提示
+        alert("账户密码错误或未注册");
+      }
+      setLoading(false); // 加载结束
+    } catch (error) {
       setLoading(false);
-    } else {
-      alert("please enter valid admin details");
-      setLoading(false);
+      alert(error.message); // 异常处理
     }
   };
+  const dispatch = useDispatch();
+  useEffect(() => {
+    loadWeb3();
+  }, []);
+  useEffect(() => {
+    loadBlockchainData(dispatch);
+  }, [dispatch]); 
 
   return (
     <StyleRoot>
@@ -38,9 +56,9 @@ export default function AdminLogin() {
         </div>
         <div style={rightDiv}>
           <div style={inputDiv}>
-            <h3 style={{ color: "white", fontSize: 23 }}>Admin Login</h3>
+            <h3 style={{ color: "white", fontSize: 23 }}>管理员登陆</h3>
             <h3 style={labels}>
-              Email <span style={{ color: "red" }}>*</span>
+              邮箱 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={email}
@@ -50,7 +68,7 @@ export default function AdminLogin() {
               type="email"
             />
             <h3 style={labels}>
-              Password <span style={{ color: "red" }}>*</span>
+              密码 <span style={{ color: "red" }}>*</span>
             </h3>
             <input
               value={password}
@@ -69,7 +87,7 @@ export default function AdminLogin() {
                   color="white"
                 />
               ) : (
-                "Login"
+                "登陆"
               )}
             </Button>
           </div>
