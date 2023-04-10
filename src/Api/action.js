@@ -4,6 +4,12 @@ export const addCandidatesAction = (data) => {
     payload: data,
   };
 };
+export const createNoticeAction = (data) => {
+  return {
+    type: "CREATE_NOTICE",
+    payload: data,
+  };
+};
 export const changeStateAction = (data) => {
   return {
     type: "CHANGE_STATE",

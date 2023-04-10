@@ -98,7 +98,7 @@ export default function AddCandidate() {
         <input
           value={qualification}
           onChange={(e) => setQualification(e.target.value)}
-          style={inputs,info}
+          style={inputs}
           placeholder="介绍"
         />
         <br />
@@ -109,11 +109,11 @@ export default function AddCandidate() {
             } else if (state === "Registration" && !loading) {
               addCandidates();
             } else if (loading) {
-              setAlertName("Please wait until transaction complete");
+              setAlertName("请等待交易完成");
               setAlert("warning");
               setOpen(true);
             } else {
-              setAlertName("Please change state to registration");
+              setAlertName("请先改变投票阶段再操作");
               setAlert("warning");
               setOpen(true);
             }

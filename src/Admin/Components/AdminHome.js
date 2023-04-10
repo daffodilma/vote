@@ -39,6 +39,11 @@ function AdminHome(props) {
   };
   const menuWithIcons = [
     {
+      name: "添加公告",
+      icon: <AccountCircleIcon />,
+      path: "Create-Notice",
+    },
+    {
       name: "候选人详情",
       icon: <AccountCircleIcon />,
       path: "Candidate-Details",
@@ -92,9 +97,10 @@ function AdminHome(props) {
           alt="bemy Sharp"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoGov7ul8dzgF8tbD125KHR49_hsRoP6FJmg&usqp=CAU"
         />
-        <h3 style={{ color: "#2d493b", marginLeft: 8 }}>
+        {/* <h3 style={{ color: "#2d493b", marginLeft: 8 }}>
           {account.substr(0, 6) + "....." + account.substr(37, 42)}
-        </h3>
+        </h3> */}
+        <h3>管理员</h3>
       </span>
       <Divider />
       <List>

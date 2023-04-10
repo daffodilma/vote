@@ -4,10 +4,15 @@ contract Evote{
     uint public candidatesCount=0;
     uint public userCount=0;
     string public changeState="";
+    string public info;
  mapping(uint => candidates) public candidatesList;
  mapping(string => email) public emailList;
  mapping(string => aadhar) public aadharList;
  mapping(string => user) public usersList;
+
+    constructor() {
+        info = "";
+    }
 
  struct user{
       string username;
@@ -15,6 +20,7 @@ contract Evote{
       string password;
       bool isVoted;
       string aadhar;
+      bool isAdmin;
       
   }
  struct email{
@@ -34,7 +40,6 @@ contract Evote{
       string qualification;
       uint voteCount;
   }
-
   // events
 
    event userCreated(
@@ -42,7 +47,8 @@ contract Evote{
       string email,
       string password,
       bool isVoted,
-      string aadhar
+      string aadhar,
+      bool isAdmin
       
     );
 
@@ -68,9 +74,9 @@ contract Evote{
       
         userCount++;
 
-        usersList[_email] = user(_username,_email,_password,false,_aadhar);
+        usersList[_email] = user(_username,_email,_password,false,_aadhar,true);
       
-        emit userCreated(_username,_email,_password,false,_aadhar);
+        emit userCreated(_username,_email,_password,false,_aadhar,true);
     }
 
   function createCandidate(string memory _name,string memory _age,string memory _party,string memory _qualification) public {
@@ -81,6 +87,15 @@ contract Evote{
       
         emit candidatesCreated(candidatesCount,_name,_age,_party,_qualification,0);
     }
+  
+  function createNotice(string memory _info) public{
+        info = _info;
+  }
+
+  // function getNotice() public view return (string memory){
+  //   return info;
+  // }
+
   function addVote(uint id,string memory _email) public {
         
         candidatesList[id].voteCount++;

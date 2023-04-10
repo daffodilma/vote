@@ -22,11 +22,11 @@ export default function AdminLogin() {
     try {
       const res = await eVote.methods.usersList(email).call(); // 从以太坊网络获取用户信息
 
-      if (res.password === password) { // 如果密码正确，跳转到投票者注册页面，并将 email 存储到本地存储中
+      if (res.password === password && res.isAdmin) { // 如果密码正确，跳转到投票者注册页面，并将 email 存储到本地存储中
         navigate("/AdminHome/Candidate-Details");
         localStorage.setItem("email", email);
       } else { // 如果密码错误，弹出警告提示
-        alert("账户密码错误或未注册");
+        alert("非管理员账号禁止登陆");
       }
       setLoading(false); // 加载结束
     } catch (error) {

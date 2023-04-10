@@ -27,33 +27,22 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-export default function CandidateTable(props) {
+export default function NoticeTable(props) {
+   console.log(props.info)
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Name</StyledTableCell>
-            <StyledTableCell align="right">Age</StyledTableCell>
-            <StyledTableCell align="right">Party</StyledTableCell>
-            <StyledTableCell align="right">Qualification</StyledTableCell>
-            <StyledTableCell align="right">Votes</StyledTableCell>
+            <StyledTableCell align="center">通知公告</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.candidatesList.map((row, index) => (
-            <StyledTableRow key={index}>
+            <StyledTableRow>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                {props.info}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.age}</StyledTableCell>
-              <StyledTableCell align="right">{row.party}</StyledTableCell>
-              <StyledTableCell align="right">
-                {row.qualification}
-              </StyledTableCell>
-              <StyledTableCell align="right">{row.voteCount}</StyledTableCell>
             </StyledTableRow>
-          ))}
         </TableBody>
       </Table>
     </TableContainer>
