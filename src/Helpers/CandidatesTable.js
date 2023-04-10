@@ -36,7 +36,7 @@ export default function CandidateTable(props) {
             <StyledTableCell>Name</StyledTableCell>
             <StyledTableCell align="right">Age</StyledTableCell>
             <StyledTableCell align="right">Party</StyledTableCell>
-            <StyledTableCell align="right">Qualification</StyledTableCell>
+            <StyledTableCell align="left">Qualification</StyledTableCell>
             <StyledTableCell align="right">Votes</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -48,7 +48,7 @@ export default function CandidateTable(props) {
               </StyledTableCell>
               <StyledTableCell align="right">{row.age}</StyledTableCell>
               <StyledTableCell align="right">{row.party}</StyledTableCell>
-              <StyledTableCell align="right">
+              <StyledTableCell align="left">
                 {row.qualification}
               </StyledTableCell>
               <StyledTableCell align="right">{row.voteCount}</StyledTableCell>

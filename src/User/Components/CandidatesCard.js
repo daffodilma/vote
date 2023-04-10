@@ -39,6 +39,13 @@ export default function CandidateCard(props) {
           >
             {props.partyName}
           </Typography>
+          <Typography
+            style={{ color: "white",whiteSpace: "pre-wrap" }}
+            gutterBottom
+            component="div"
+          > 
+            {props.introduce}
+          </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions style={cardAction}>

@@ -31,10 +31,10 @@ export default function VoterArea() {
   const [open, setOpen] = React.useState(false);
   const handleClick = () => {
     if (aadhar === "") {
-      setAlertName("You are not registered your aadhar");
+      setAlertName("您还未验证身份");
       setAlert("warning");
     } else {
-      setAlertName("You have already voted");
+      setAlertName("您已经投过票了");
       setAlert("error");
     }
     setOpen(true);
@@ -71,7 +71,7 @@ export default function VoterArea() {
         image={
           "https://img.freepik.com/free-vector/voters-inserting-forms-into-ballot-boxes_74855-4585.jpg?size=626&ext=jpg&ga=GA1.1.1522381886.1646910666"
         }
-        header={"Voting is done , Results are announced"}
+        header={"投票已结束"}
       />
     );
   }
@@ -91,9 +91,10 @@ export default function VoterArea() {
           handleClick={handleClick}
           key={index}
           id={index + 1}
-          partyName={data.party}
+          partyName={data.name}
           isVoted={isVoted}
           email={email}
+          introduce = {data.qualification}
         />
       ))}
 
