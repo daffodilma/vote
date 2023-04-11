@@ -176,7 +176,7 @@ const button = {
   marginTop: 10,
   height: 43,
   backgroundColor: "#6b8e4e",
-  "@media (max-width: 500px)": {},
+  "@media (maxWidth: 500px)": {},
 };
 
 const info = {

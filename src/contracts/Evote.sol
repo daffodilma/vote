@@ -1,7 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 contract Evote{
+    uint public userKey = 0;
+    uint public salt = 123; // 添加盐以增加随机性
+    // uint public key = 0;
     uint public candidatesCount=0;
+    uint public keyCount=0;
     uint public userCount=0;
     string public changeState="";
     string public info;
@@ -21,6 +25,7 @@ contract Evote{
       bool isVoted;
       string aadhar;
       bool isAdmin;
+      bool isKey;
       
   }
  struct email{
@@ -48,7 +53,8 @@ contract Evote{
       string password,
       bool isVoted,
       string aadhar,
-      bool isAdmin
+      bool isAdmin,
+      bool isKey
       
     );
 
@@ -74,9 +80,9 @@ contract Evote{
       
         userCount++;
 
-        usersList[_email] = user(_username,_email,_password,false,_aadhar,true);
+        usersList[_email] = user(_username,_email,_password,false,_aadhar,true,false);
       
-        emit userCreated(_username,_email,_password,false,_aadhar,true);
+        emit userCreated(_username,_email,_password,false,_aadhar,true,false);
     }
 
   function createCandidate(string memory _name,string memory _age,string memory _party,string memory _qualification) public {
@@ -119,6 +125,12 @@ contract Evote{
 
         emit aadharCreated(_accountAddress, _email);
   }
-  
+  function generateKey() public {
 
+        keyCount++;
+        userKey = uint(keccak256(abi.encodePacked(salt, block.timestamp))); 
+        
 }
+}
+
+

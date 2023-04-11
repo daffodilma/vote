@@ -103,7 +103,7 @@ const rootDiv = {
   flex: 1,
   flexDirection: "row",
   height: "100vh",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     height: "100vh",
   },
 };
@@ -113,7 +113,7 @@ const leftDiv = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     height: "100vh",
     display: "none",
   },
@@ -126,7 +126,7 @@ const rightDiv = {
   justifyContent: "center",
   flexDirection: "column",
   alignItems: "center",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     height: "100vh",
     flex: 1,
   },
@@ -136,7 +136,7 @@ const inputDiv = {
   width: "80%",
   display: "flex",
   flexDirection: "column",
-  "@media (max-width: 500px)": {},
+  "@media (maxWidth: 500px)": {},
 };
 const inputs = {
   backgroundColor: "white",
@@ -151,7 +151,7 @@ const inputs = {
   border: "1px solid grey",
   outline: "none",
   width: "73%",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     width: "80%",
   },
 };
@@ -170,5 +170,5 @@ const button = {
   marginTop: 50,
   height: 43,
   background: "linear-gradient(to right, black, #6b8e4e",
-  "@media (max-width: 500px)": {},
+  "@media (maxWidth: 500px)": {},
 };

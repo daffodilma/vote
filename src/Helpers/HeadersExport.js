@@ -15,11 +15,15 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import KeyIcon from '@mui/icons-material/Key';
 import LogoutIcon from "@mui/icons-material/Logout";
+import AddCommentIcon from '@mui/icons-material/AddComment';
 
 
 import { Avatar } from "@mui/material";
 export {
+  AddCommentIcon,
+  KeyIcon,
   AppBar,
   Box,
   CssBaseline,

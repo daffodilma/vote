@@ -19,6 +19,8 @@ import {
   PersonAddIcon,
   PublishedWithChangesIcon,
   AccountCircleIcon,
+  AddCommentIcon,
+  KeyIcon,
   LogoutIcon,
   Avatar,
 } from "../../Helpers/HeadersExport";
@@ -40,7 +42,7 @@ function AdminHome(props) {
   const menuWithIcons = [
     {
       name: "添加公告",
-      icon: <AccountCircleIcon />,
+      icon: <AddCommentIcon />,
       path: "Create-Notice",
     },
     {
@@ -63,6 +65,11 @@ function AdminHome(props) {
       icon: <HowToRegIcon />,
       path: "Analytics",
     },
+    {
+      name: "密钥生成",     
+      icon: <KeyIcon />,
+      path: "Create-Code",
+    },
 
     {
       name: "登出",
@@ -71,7 +78,7 @@ function AdminHome(props) {
     },
   ];
   // connecting to ganache
-  const account = useSelector((state) => state.account.account);
+  // const account = useSelector((state) => state.account.account); 
   const eVote = useSelector((state) => state.eVote.eVote);
   useEffect(() => {
     loadWeb3();

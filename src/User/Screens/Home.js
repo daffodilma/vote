@@ -49,7 +49,7 @@ const rootDiv = {
   display: "flex",
   flex: 1,
   flexDirection: "row",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     height: "100vh",
   },
 };
@@ -60,7 +60,7 @@ const leftDiv = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     height: "100vh",
     display: "none",
   },
@@ -74,7 +74,7 @@ const rightDiv = {
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: "black",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     height: "100vh",
     flex: 1,
   },
@@ -85,7 +85,7 @@ const rightTitle = {
   padding: 10,
   fontSize: 33,
   fontWeight: "bold",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     color: "white",
   },
 };
@@ -95,7 +95,7 @@ const rightCatption = {
   padding: 10,
   fontSize: 26,
   fontWeight: "bold",
-  "@media (max-width: 500px)": {
+  "@media (maxWidth: 500px)": {
     color: "white",
   },
 };

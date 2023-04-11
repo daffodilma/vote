@@ -130,7 +130,7 @@ const button = {
   marginBottom: 20,
   height: 50,
   backgroundColor: "black",
-  "@media (max-width: 500px)": {},
+  "@media (maxWidth: 500px)": {},
 };
 
 // const info = {

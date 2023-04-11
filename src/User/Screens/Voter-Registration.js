@@ -5,38 +5,57 @@ import { useSelector } from "react-redux";
 import Snackbars from "../../Helpers/SnackBar";
 
 export default function VoterRegistration() {
-  const [aadhar, setAadhar] = useState("");
+  const [userKey,setUserkey] = useState('')
   const [alert, setAlert] = useState("");
   const [alertName, setAlertName] = useState("");
   const [open, setOpen] = useState(false);
   const eVote = useSelector((state) => state.eVote.eVote);
   const account = useSelector((state) => state.account.account);
-  const email = localStorage.getItem("email");
-  const addAadhar = async () => {
-    try {
-      const res = await eVote.methods.usersList(email).call();
-      const aadharRes = await eVote.methods.aadharList(aadhar).call();
-      if (res.aadhar) {
-        setAlert("warning");
-        setAlertName("你已经验证过手机号了");
-        setOpen(true);
-        return;
-      }
-      if (aadharRes.accountAddress !== "") {
-        setAlert("warning");
-        setAlertName("手机号已被注册");
-        setOpen(true);
-        return;
-      }
-      await eVote.methods
-        .createAdharEmail(aadhar, account, email)
-        .send({ from: account });
+  // const addAadhar = async () => {
+  //   try {
+  //     const res = await eVote.methods.usersList(email).call();
+  //     const aadharRes = await eVote.methods.aadharList(aadhar).call();
+  //     if (res.aadhar) {
+  //       setAlert("warning");
+  //       setAlertName("你已经验证过手机号了");
+  //       setOpen(true);
+  //       return;
+  //     }
+  //     if (aadharRes.accountAddress !== "") {
+  //       setAlert("warning");
+  //       setAlertName("手机号已被注册");
+  //       setOpen(true);
+  //       return;
+  //     }
+  //     await eVote.methods
+  //       .createAdharEmail(aadhar, account, email)
+  //       .send({ from: account });
 
-      // window.location.reload();
-    } catch (error) {
-      // console.log(error.message);
+  //     // window.location.reload();
+  //   } catch (error) {
+  //     // console.log(error.message);
+  //   }
+  // };
+  const confirmKey = async() => {
+    try{
+      const res = await eVote.methods?.userKey().call();
+      if (res === userKey) {
+         setAlert("success");
+         setAlertName("身份验证成功");
+         setOpen(true);
+         console.log(res);
+         return
+      } else {
+        setAlert("warning");
+        setAlertName("身份验证失败");
+        setOpen(true);
+        return
+      }
     }
-  };
+    catch (error) {
+            console.log(error.message);
+         }
+  }
 
   return (
     <div style={{ display: "flex", flex: 1 }}>
@@ -53,15 +72,15 @@ export default function VoterRegistration() {
         <Divider style={{ width: "100%" }} />
         <br />
         <div style={numberDiv}>
-          <h3 style={ head }>请输入手机号码 *</h3>
+          <h3 style={ head }>密钥 *</h3>
           <input
-            value={aadhar}
-            onChange={(e) => setAadhar(e.target.value)}
+            value={userKey}
+            onChange={(e) => setUserkey(e.target.value)}
             style={input}
-            placeholder="手机号"
+            placeholder="密钥"
           />
           <br />
-          <Button onClick={addAadhar} variant="contained" style={button}>
+          <Button onClick={confirmKey} variant="contained" style={button}>
             确认
           </Button>
         </div>
@@ -122,7 +141,7 @@ const button = {
 }
 
 const head = {
-  width:"150px",
+  width: "60px",
   height: "50px",
   margin: "0 auto"
 }
