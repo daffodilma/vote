@@ -79,7 +79,7 @@ export default function AddCandidate() {
               height={25}
               width={25}
               type={"spinningBubbles"}
-              color="white"
+              color="black"
             />
           ) : (
             "发布公告"
@@ -97,7 +97,7 @@ export default function AddCandidate() {
 }
 const paper = {
   paddingTop: 150,
-  backgroundColor: "#2d493b",
+  backgroundColor: "white",
   width: "90%",
   height: "30rem",
   display: "flex",
@@ -110,12 +110,12 @@ const inputs = {
   margin: "10px auto",
   fontSize: 16,
   borderRadius: 4,
-  outline: "none",
-  border: "none",
+  // outline: "none",
+  // border: "none",
   padding: 10,
 };
 const labels = {
-  color: "white",
+  color: "black",
   margin: 5,
   fontSize: 16,
   textAlign: "center",
@@ -145,7 +145,7 @@ const button = {
 // }
 
 const tit = {
-  color:"white",
+  color:"black",
   textAlign: "center",
   fontSize: 35,
 }

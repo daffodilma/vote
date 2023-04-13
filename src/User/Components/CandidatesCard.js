@@ -3,11 +3,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import { useState } from "react";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { useSelector } from "react-redux";
 
 export default function CandidateCard(props) {
   const eVote = useSelector((state) => state.eVote.eVote);
+  const [alert, setAlert] = useState("");
+  const [alertName, setAlertName] = useState("");
 
   const account = useSelector((state) => state.account.account);
   const vote = async () => {
@@ -15,8 +18,10 @@ export default function CandidateCard(props) {
       await eVote.methods
         .addVote(props.id, props.email)
         .send({ from: account });
-
-      window.location.reload();
+        
+        setAlertName("您投票成功");
+        setAlert("warning");
+        window.location.reload();
     } catch (error) {
       alert(error.message);
     }

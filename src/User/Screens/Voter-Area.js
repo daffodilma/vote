@@ -7,6 +7,7 @@ import CandidatesEmptyPage from "../Components/EmptyPages";
 
 export default function VoterArea() {
   const dispatch = useDispatch();
+  const [userKey,setUserkey] = useState('')
   const [aadhar, setAadhar] = useState("");
   const [alert, setAlert] = useState("");
   const [state, setState] = useState("");
@@ -17,8 +18,10 @@ export default function VoterArea() {
   const getAadhar = async () => {
     try {
       const res = await eVote.methods.usersList(email).call();
-      setAadhar(res.aadhar);
+      const userKey = await eVote.methods?.userKey().call();
+      setAadhar(userKey);
       setIsVoted(res.isVoted);
+      console.log(userKey)
     } catch (error) {}
   };
   const eVote = useSelector((state) => state.eVote.eVote);
@@ -31,9 +34,10 @@ export default function VoterArea() {
   const [open, setOpen] = React.useState(false);
   const handleClick = () => {
     if (aadhar === "") {
+
       setAlertName("您还未验证身份");
       setAlert("warning");
-    } else {
+    } else if(isVoted){
       setAlertName("您已经投过票了");
       setAlert("error");
     }

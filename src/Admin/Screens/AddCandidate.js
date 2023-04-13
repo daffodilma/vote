@@ -144,9 +144,9 @@ export default function AddCandidate() {
 }
 const paper = {
   paddingTop: 150,
-  background: "linear-gradient(to right, white, #2d493b)",
-  width: "50%",
-  height: "700px",
+  background: "white",
+  width: "70%",
+  height: "600px",
   display: "flex",
   flexDirection: "column",
   padding: 10,
@@ -157,8 +157,8 @@ const inputs = {
   margin: "10px auto",
   fontSize: 16,
   borderRadius: 4,
-  outline: "none",
-  border: "none",
+  // outline: "none",
+  // border: "1px",
   padding: 10,
 };
 const labels = {
@@ -179,16 +179,16 @@ const button = {
   "@media (maxWidth: 500px)": {},
 };
 
-const info = {
-  width: "60%",
-  height: 120,
-  margin: "7px auto",
-  fontSize: 16,
-  borderRadius: 4,
-  outline: "none",
-  border: "none",
-  padding: 10,
-}
+// const info = {
+//   width: "60%",
+//   height: 120,
+//   margin: "7px auto",
+//   fontSize: 16,
+//   borderRadius: 4,
+//   outline: "none",
+//   border: "none",
+//   padding: 10,
+// }
 
 const tit = {
   color:"black",

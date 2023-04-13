@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Paper from "@mui/material/Paper";
 import { Button, Divider } from "@mui/material";
 import { useSelector } from "react-redux";
 import Snackbars from "../../Helpers/SnackBar";
 
 export default function VoterRegistration() {
+  const [aadhar, setAadhar] = useState("");
   const [userKey,setUserkey] = useState('')
   const [alert, setAlert] = useState("");
   const [alertName, setAlertName] = useState("");
   const [open, setOpen] = useState(false);
+  const [isVoted, setIsVoted] = useState(false);
   const eVote = useSelector((state) => state.eVote.eVote);
   const account = useSelector((state) => state.account.account);
+  const email = localStorage.getItem("email");
   // const addAadhar = async () => {
   //   try {
   //     const res = await eVote.methods.usersList(email).call();
@@ -36,10 +39,21 @@ export default function VoterRegistration() {
   //     // console.log(error.message);
   //   }
   // };
+  const getAadhar = async () => {
+    try {
+      const res = await eVote.methods.usersList(email).call();
+      setAadhar(res.aadhar);
+      setIsVoted(res.isVoted);
+    } catch (error) {}
+  };
+  
   const confirmKey = async() => {
     try{
       const res = await eVote.methods?.userKey().call();
       if (res === userKey) {
+        await eVote.methods
+        .createAdharEmail(aadhar, account, email)
+        .send({ from: account });
          setAlert("success");
          setAlertName("身份验证成功");
          setOpen(true);
@@ -56,6 +70,10 @@ export default function VoterRegistration() {
             console.log(error.message);
          }
   }
+
+  useEffect(() => {
+    getAadhar();
+  });
 
   return (
     <div style={{ display: "flex", flex: 1 }}>
