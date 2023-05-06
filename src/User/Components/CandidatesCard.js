@@ -33,7 +33,7 @@ export default function CandidateCard(props) {
         <CardMedia
           component="img"
           height="160"
-          image="https://media.istockphoto.com/vectors/woman-speaker-and-a-group-of-people-listen-to-a-speech-vector-id1231031552?k=20&m=1231031552&s=612x612&w=0&h=GTWPcq93OGD-SQ9J5aIQZIqqwZA1eKfLebWu_I552uA="
+          image="http://121.5.78.68:83/speech.png"
           alt="green iguana"
         />
         <CardContent style={cardContent}>

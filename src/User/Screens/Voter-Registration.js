@@ -83,7 +83,7 @@ export default function VoterRegistration() {
           <img
             alt="background"
             style={image}
-            src="https://media4.giphy.com/media/Q7xOBMP7DcOdxSRAsi/200w.webp?cid=ecf05e47ixhwnkuiqwfq5nu707slp9gph0zts09dyoiimwlt&rid=200w.webp&ct=g"
+            src="http://121.5.78.68:83/verification.png"
           />
         </div>
         <br />
@@ -128,8 +128,8 @@ const text = {
   margin: 3,
 };
 const image = {
-  height: 200,
-  width: 200,
+  height: 230,
+  width: 300,
 };
 const scanDiv = {
   display: "flex",

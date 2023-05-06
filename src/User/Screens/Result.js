@@ -37,7 +37,7 @@ export default function Result() {
         <h2>Winner!</h2>
         <WinnerCard
           image={
-            "https://media.istockphoto.com/vectors/woman-speaker-and-a-group-of-people-listen-to-a-speech-vector-id1231031552?k=20&m=1231031552&s=612x612&w=0&h=GTWPcq93OGD-SQ9J5aIQZIqqwZA1eKfLebWu_I552uA="
+            "http://121.5.78.68:83/speech.png"
           }
           partyName={winner.partyName}
           votes={winner.votes}
@@ -52,7 +52,7 @@ export default function Result() {
       <div>
         <CandidatesEmptyPage
           image={
-            "https://img.freepik.com/free-vector/voters-inserting-forms-into-ballot-boxes_74855-4585.jpg?size=626&ext=jpg&ga=GA1.1.1522381886.1646910666"
+            "http://121.5.78.68:83/voting.png"
           }
           header={"目前无法查看结果"}
         />
