@@ -8,7 +8,7 @@ export default function CandidatesChart(props) {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="votes" fill="#8884d8" />
+        <Bar dataKey="votes" fill="green" />
       </BarChart>
     </div>
   );
